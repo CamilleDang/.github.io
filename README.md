@@ -50,10 +50,13 @@ Additionally, I aligned all images with the **blue** channel, as I had done prev
 
 ### Bells and Whistles: Better Features - Gradients
 
-For bells and whistles, I tried another 
-|  |  |
-|:-------------------------:|:-------------------------:|
-| <img width="600" alt="Church" src="churchfit.jpg">  Church, R: (-4, 58), G: (4, 25) | <img width="600" alt="Harvesters" src="harvestersfit.jpg"> Harvesters, R: (13, 124), G: (16, 59) |
+For bells and whistles, I tried minimizing a different loss function. Instead of mapping by RGB similarity, which can sometimes be faulty (shown above by Emir)
+
+This method worked for all images but was slower (~3 minutes); however, specifically for Emir's image, the gradient was a better feature to compare similarity 
+
+| RBG Similarity (Blue Base) | RBG Similarity (Green Base) | Gradient Similarity (Blue Base) |
+|:-------------------------:|:-------------------------:|:-------------------------:|
+| <img width="500" alt="Emir Reg Alignment" src="emirfit.jpg"> Emir (*aligned on **blue** channel*), R: (-630, 153), G: (24, 49) | <img width="500" alt="Emir Green" src="emirswitch.jpg"> Emir (*aligned on **green** channel*), R: (17, 57), B: (-24, -49) | <img width="500" alt="Emir Gradient Align" src="emirgradient.jpg"> Emir (aligned on **green** , R: (41, 105), G: (24, 49) |
 
 
 emir gradient offsets: 

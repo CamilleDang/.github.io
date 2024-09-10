@@ -96,8 +96,8 @@ three generations:
 |:-------------------------:|:-------------------------:|
 | <img width="600" alt="Church" src="churchfit.jpg">  Church, R: (-4, 58), G: (4, 25) | <img width="600" alt="Harvesters" src="harvestersfit.jpg"> Harvesters, R: (13, 124), G: (16, 59) |
 |<img width="600" alt="Sculpture fit" src="sculpturefit.jpg"> Sculpture, R: (-27, 140), G: (-11, 33) |  <img width="600" alt="Lady" src="ladyfit.jpg"> Lady, R: (11, 112), G: (9, 49) |
-|<img width="600" alt="Icon fit" src="iconfit.jpg"> Icon, R: (23, 89), G: (17, 40) |  <img width="600" alt="Melons" src="melonsfit.jpg"> Melons, R: (13, 179), G: (10, 82) |
-|<img width="600" alt="Train fit" src="trainfit.jpg"> Train, R: (32, 87), G: (5, 42) |  <img width="600" alt="Onion Church fit" src="onion_church.jpg"> Onion Church, R: (36, 108), G: (26, 51) |
+|<img width="600" alt="Icon fit" src="iconfit.jpg"> Icon, R: (23, 89), G: (17, 40) |  <img width="600" alt="Melons" src="melons.jpg"> Melons, R: (13, 179), G: (10, 82) |
+|<img width="600" alt="Train fit" src="trainfit.jpg"> Train, R: (32, 87), G: (5, 42) |  <img width="600" alt="Onion Church fit" src="onionchurch.jpg"> Onion Church, R: (36, 108), G: (26, 51) |
 |<img width="600" alt="Self Portrait Fit" src="selfportraitfit.jpg"> Train, R: (32, 87), G: (5, 42) |  <img width="600" alt="Three Generations fit" src="three_generations.jpg"> Onion Church, R: (36, 108), G: (26, 51) |
 
 ### Bells and Whistles: Better Features - Gradients

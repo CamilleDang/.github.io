@@ -56,7 +56,7 @@ This method worked for all images but was slower (~3 minutes); however, specific
 
 | RBG Similarity (Blue Base) | RBG Similarity (Green Base) | Gradient Similarity (Blue Base) |
 |:-------------------------:|:-------------------------:|:-------------------------:|
-| <img width="500" alt="Emir Reg Alignment" src="emirfit.jpg"> Emir (*aligned on **blue** channel*), R: (-630, 153), G: (24, 49) | <img width="500" alt="Emir Green" src="emirswitch.jpg"> Emir (*aligned on **green** channel*), R: (17, 57), B: (-24, -49) | <img width="500" alt="Emir Gradient Align" src="emirgradient.jpg"> Emir (aligned on **green** , R: (41, 105), G: (24, 49) |
+| <img width="500" alt="Emir Reg Alignment" src="emirfit.jpg"> R: (-630, 153), G: (24, 49) | <img width="500" alt="Emir Green" src="emirswitch.jpg"> R: (17, 57), B: (-24, -49) | <img width="500" alt="Emir Gradient Align" src="emirgradient.jpg"> R: (41, 105), G: (24, 49) |
 
 
 emir gradient offsets: 

@@ -22,12 +22,14 @@ I also implemented the NCC align function and added the option to add various lo
 
 ### Examples:
 
-| | | 
+| Images Without Alignment | Images With Alignment | 
 |:-------------------------:|:-------------------------:|
-|<img width="400" alt="cathedral w/o alignment" src="cathedralfit.jpg"> Cathedal Image *Without* Alignment|  <img width="400" alt="cathedral w/ alignment" src="cathedralfit.jpg"> **With** Alignment (*aligned on blue channel*) R: (3, 12), G(2, 5)|
-|<img width="400" alt="monastery w/o alignment" src="cathedralfit.jpg"> Monastery Image *Without* Alignment|  <img width="400" alt="monastery w/ alignment" src="monasteryfit.jpg"> 
-**With** Alignment (*aligned on blue channel*) R: (2, 3), G(2, -3)|
-|<img width="400" alt="tobolsk w/o alignment" src="cathedralfit.jpg"> Tobolsk Image *Without* Alignment |  <img width="400" alt="tobolsk w/ alignment" src="tobolskfit.jpg"> **With** Alignment (*aligned on blue channel*) R: (3, 6), G(2, 3)|
+|<img width="500" alt="cathedral w/o alignment" src="cathedralfit.jpg"> Cathedral Image|  <img width="500" alt="cathedral w/ alignment" src="cathedralfit.jpg"> 
+(*aligned on blue channel*) R: (3, 12), G: (2, 5)|
+|<img width="500" alt="monastery w/o alignment" src="cathedralfit.jpg"> Monastery Image|  <img width="500" alt="monastery w/ alignment" src="monasteryfit.jpg"> 
+(*aligned on blue channel*) R: (2, 3), G: (2, -3)|
+|<img width="500" alt="tobolsk w/o alignment" src="cathedralfit.jpg"> Tobolsk Image|  <img width="500" alt="tobolsk w/ alignment" src="tobolskfit.jpg">
+(*aligned on blue channel*) R: (3, 6), G: (2, 3)|
 
 ### Implementing the Image Pyramid
 This does not work for larger images because the computation and iteration for the align function is far too expensive with larger pixels. Thus, I implemented a recursive image pyramid that downscales an image and base image by 2 until it reaches a certain smaller limit (which I initially set as a 512-pixel limit on either the width or the height), which is when I call my align function to receive the optimal offset x and y. 
@@ -69,19 +71,6 @@ lady:
 icon:
 red: 23, 89
 green: 17, 40
-==
-cathedral:
-3, 12
-2, 5
-
-monastery:
-2, 3
-2, -3
-
-tobolsk:
-3,6
-2,3 
-==
 
 melons:
 13, 179
@@ -103,14 +92,13 @@ three generations:
 11, 112
 14, 53
 
-
-
-| | | 
+| Hello | Hello |
 |:-------------------------:|:-------------------------:|
-
-|<img width="1604" alt="Church tif w/ base blue alignment" src=""> Church w/ base blue alignment |  <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">|
-|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">  |  <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">|
-|<img width="1604" alt="Emir w/ base blue alignment" src=""> Emir with blue base alignment |  <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">|
+| <img width="600" alt="Church" src="churchfit.jpg">  Church, R: (-4, 58), G: (4, 25) | <img width="600" alt="Harvesters" src="harvestersfit.jpg"> Harvesters, R: (13, 124), G: (16, 59) |
+|<img width="600" alt="Sculpture fit" src="sculpturefit.jpg"> Sculpture, R: (-27, 140), G: (-11, 33) |  <img width="600" alt="Lady" src="ladyfit.jpg"> Lady, R: (11, 112), G: (9, 49) |
+|<img width="600" alt="Icon fit" src="iconfit.jpg"> Icon, R: (23, 89), G: (17, 40) |  <img width="600" alt="Melons" src="melonsfit.jpg"> Melons, R: (13, 179), G: (10, 82) |
+|<img width="600" alt="Train fit" src="trainfit.jpg"> Train, R: (32, 87), G: (5, 42) |  <img width="600" alt="Onion Church fit" src="onion_church.jpg"> Onion Church, R: (36, 108), G: (26, 51) |
+|<img width="600" alt="Self Portrait Fit" src="selfportraitfit.jpg"> Train, R: (32, 87), G: (5, 42) |  <img width="600" alt="Three Generations fit" src="three_generations.jpg"> Onion Church, R: (36, 108), G: (26, 51) |
 
 ### Bells and Whistles: Better Features - Gradients
 I tried another 

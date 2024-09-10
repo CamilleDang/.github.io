@@ -2,6 +2,8 @@
 
 ## Project 1: Prokudin-Gorskii :) 
 
+*Follow along with the code here: https://github.com/CamilleDang/.github.io*
+
 ### Overview
 This project is based on bringing color to the Prokudin-Gorskii photo collection. Sergei Mikhailovich Prokudin-Gorskii, a man well-ahead of his time, was convinced that there would eventually be colored photos. In the early 1900s, he took many pictures, recording three exposures of every scene he took onto a glass plate using a red, green, and blue filter. He never got to piece them together to make a colored image, but we can now! So cool!
 

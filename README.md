@@ -50,6 +50,14 @@ Additionally, I aligned all images with the **blue** channel, as I had done prev
 |<img width="600" alt="Self Portrait Fit" src="selfportraitfit.jpg"> Self Portrait, R: (37, 176), G: (29, 78) |  <img width="600" alt="Three Generations fit" src="threegenerationsfit.jpg"> Three Generations, R: (11, 112), G: (14, 53) |
 |<img width="600" alt="Emir Reg Alignment" src="emirfit.jpg"> Emir (*aligned on **blue** channel*), R: (-630, 153), G: (24, 49) |  <img width="600" alt="Emir Green" src="emirswitch.jpg"> Emir (*aligned on **green** channel*), R: (17, 57), B: (-24, -49) |
 
+### Extra Examples
+
+Three more extra examples (tif files: Lugano Grass, Lugano Ocean, and Zakat na morie) from the Prokudin-Gorskii photo collection, using L2 euclidean norm. It turned out very pretty!
+
+| | |  |
+|:-------------------------:|:-------------------------:|:-------------------------:|
+| <img width="500" alt="image 1 Alignment" src="eximage2.jpg"> Lugano Grass R: (38, 86), G: (13, 36) | <img width="500" alt="Emir Green" src="eximageah.jpg"> Lugano Ocean R: (-29, 92), B: (-16, 41) | <img width="500" alt="Emir Gradient Align" src="emirgradient.jpg"> Zakat na mori︠e︡ R: (-54, 17), G: (-41, 0) |
+
 ### Bells and Whistles: Better Features - Gradients
 
 For bells and whistles, I tried minimizing a different loss function. Instead of mapping by RGB similarity, which can sometimes be faulty (shown above by Emir), I wrote a function that finds the Euclidean distance between the gradients of image 1 and image 2.

@@ -52,7 +52,7 @@ Additionally, I aligned all images with the **blue** channel, as I had done prev
 
 ### Extra Examples
 
-Three more extra examples (tif files: Lugano Grass, Lugano Ocean, and Zakat na morie) from the Prokudin-Gorskii photo collection, using L2 euclidean norm. It turned out very pretty!
+Three more extra examples (tif files: Lugano Grass, Lugano Ocean, and Lastochkino gni︠e︡zdo) from the Prokudin-Gorskii photo collection, using L2 euclidean norm. It turned out very pretty!
 
 | | |  |
 |:-------------------------:|:-------------------------:|:-------------------------:|

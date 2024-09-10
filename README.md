@@ -24,9 +24,10 @@ I also implemented the NCC align function and added the option to add various lo
 
 | | | 
 |:-------------------------:|:-------------------------:|
-|<img width="1604" alt="cathedral w/o alignment" src="train.jpg"> Cathedal Image Without Alignment|  <img width="1604" alt="cathedral w/ alignment" src="trainfit.jpg"> With Alignment *aligned on blue channel* Green: (), Red()|
-|<img width="1604" alt="monastery w/o alignment" src="og train jpg"> Monastery Image Without Alignment|  <img width="1604" alt="monastery w/ alignment" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png"> With Alignment *aligned on blue channel* Green: (), Red()|
-|<img width="1604" alt="tobolsk w/o alignment" src=""> Tobolsk Image Without Alignment |  <img width="1604" alt="tobolsk w/ alignment" src=""> With Alignment *aligned on blue channel* Green: (), Red()|
+|<img width="400" alt="cathedral w/o alignment" src="cathedralfit.jpg"> Cathedal Image *Without* Alignment|  <img width="400" alt="cathedral w/ alignment" src="cathedralfit.jpg"> **With** Alignment (*aligned on blue channel*) R: (3, 12), G(2, 5)|
+|<img width="400" alt="monastery w/o alignment" src="cathedralfit.jpg"> Monastery Image *Without* Alignment|  <img width="400" alt="monastery w/ alignment" src="monasteryfit.jpg"> 
+**With** Alignment (*aligned on blue channel*) R: (2, 3), G(2, -3)|
+|<img width="400" alt="tobolsk w/o alignment" src="cathedralfit.jpg"> Tobolsk Image *Without* Alignment |  <img width="400" alt="tobolsk w/ alignment" src="tobolskfit.jpg"> **With** Alignment (*aligned on blue channel*) R: (3, 6), G(2, 3)|
 
 ### Implementing the Image Pyramid
 This does not work for larger images because the computation and iteration for the align function is far too expensive with larger pixels. Thus, I implemented a recursive image pyramid that downscales an image and base image by 2 until it reaches a certain smaller limit (which I initially set as a 512-pixel limit on either the width or the height), which is when I call my align function to receive the optimal offset x and y. 

@@ -10,10 +10,10 @@ This project is based on bringing color to the Prokudin-Gorskii photo collection
 <img height="500" alt="cathedral jpg" src="cathedral.jpg">
 
 ### Naive Approach
-I first started by taking each image (which has the 'red', 'green', and 'blue' filtered images stacked upon each other, as shown above) and extracting the three separate images. Then, I created an align function that takes in two images, and returns the best x and y offset that minimizes a loss between the first image's position according to the second image within an exhaustive search of a given window, finding the closest similarity between the two images as possible. I used the Euclidean distance as my loss function and searched over window sizes of [-15, 15] to find the x and y offset that returned the lowest Euclidean distance between the pixels of the first and second image.
-Once the offset is found, we adjust the image accordingly.
+I first started by taking each image (which has the 'red', 'green', and 'blue' filtered images stacked upon each other, as shown above) and extracting the three separate images. Then, I created an align function that takes in two images, and returns the best x and y offset that minimizes a loss between the first image's pixels and the second image's pixels within an a given window. By exhaustively searching for image1's x and y offset that minimizes the loss, the function will find the closest similarity between the two images as possible. I used the Euclidean distance as my loss function and searched over window sizes of [-15, 15] to find the x and y offset that returned the lowest Euclidean distance between the pixels of the first and second image.
 
-I effectively used this method for all three jpg files, using the blue channel as the base image.
+Once the offset is found, we adjust the image accordingly: I adjusted the image in the align_final function after finding the optimal offset.
+I effectively used this method for all three jpg files), using the **blue** channel as the base for all three.
 
 ### Further Improvements:
 After the naive implementation, I also implemented a crop function that takes in an image and a percentage, and returns the image after cropping that percentage of the image. I 
@@ -24,15 +24,18 @@ I also implemented the NCC align function and added the option to add various lo
 
 | Images Without Alignment | Images With Alignment | 
 |:-------------------------:|:-------------------------:|
-|<img width="500" alt="cathedral w/o alignment" src="cathedralfit.jpg"> Cathedral|  <img width="500" alt="cathedral w/ alignment" src="cathedralfit.jpg"> R: (3, 12), G: (2, 5)|
-|<img width="500" alt="monastery w/o alignment" src="cathedralfit.jpg"> Monastery |  <img width="500" alt="monastery w/ alignment" src="monasteryfit.jpg"> R: (2, 3), G: (2, -3)|
-|<img width="500" alt="tobolsk w/o alignment" src="cathedralfit.jpg"> Tobolsk |  <img width="500" alt="tobolsk w/ alignment" src="tobolskfit.jpg"> R: (3, 6), G: (2, 3)|
+|<img width="500" alt="cathedral w/o alignment" src="cathedralog.jpg"> Cathedral |  <img width="500" alt="cathedral w/ alignment" src="cathedralfit.jpg"> R: (3, 12), G: (2, 5)|
+|<img width="500" alt="monastery w/o alignment" src="monasteryog.jpg"> Monastery |  <img width="500" alt="monastery w/ alignment" src="monasteryfit.jpg"> R: (2, 3), G: (2, -3)|
+|<img width="500" alt="tobolsk w/o alignment" src="tobolskog.jpg"> Tobolsk |  <img width="500" alt="tobolsk w/ alignment" src="tobolskfit.jpg"> R: (3, 6), G: (2, 3)|
 
 ### Implementing the Image Pyramid
-This does not work for larger images because the computation and iteration for the align function is far too expensive with larger pixels. Thus, I implemented a recursive image pyramid that downscales an image and base image by 2 until it reaches a certain smaller limit (which I initially set as a 512-pixel limit on either the width or the height), which is when I call my align function to receive the optimal offset x and y. 
 
-### Further Improvements
-My code was running at about 1.5 minutes, and thus to optimize, I triedrecursing to a smaller base case and also changing the pixel window to smaller
+This naive align implementation is effective for smaller jpg files, such as the ones shown above, but is not efficient enough for larger images because the computation and iteration for the align function is far too expensive. Thus, I implemented a recursive image pyramid that downscales an image and base image by 2 until it reaches a certain smaller limit (which I initially set as a 512-pixel limit on either the width or the height), which is when I call my align function to find the optimal offset x and y for that downscaled image. After finding the optimal offset for that downscaled image, we recursively multiply by 2 for each corresponding layer of recursion until we find the optimal offset for the original large image without the computational inefficiency of the exhaustive window search on the larger image.  
+
+### Further Improvements / Struggles 
+At first, my was running at about 1.5 minutes, and thus to optimize, I tried recursing to a smaller base case (decreasing the 512-pixel width/height limit of the image to 128) and also slightly decreasing the pixel window to [-10, 10]. This brought my runtime to around 30 seconds for all .tif images. 
+
+Additionally, I aligned all images with the **blue** channel, as I had done previously, which worked for all except for one: Emir. This is likely due to Emir's predominantly strong blue clothing, and the fact that I am using the actual R, G, B pixel values to minimize loss. To fix this, I aligned Emir's image with the **green** channel as the base, which aligned much better. This is shown at the bottom of the examples.
 
 ### Examples:
 
@@ -46,7 +49,8 @@ My code was running at about 1.5 minutes, and thus to optimize, I triedrecursing
 |<img width="600" alt="Emir Reg Alignment" src="emirfit.jpg"> Emir (*aligned on **blue** channel*), R: (-630, 153), G: (24, 49) |  <img width="600" alt="Emir Green" src="emirswitch.jpg"> Emir (*aligned on **green** channel*), R: (17, 57), B: (-24, -49) |
 
 ### Bells and Whistles: Better Features - Gradients
-I tried another 
+
+For bells and whistles, I tried another 
 |  |  |
 |:-------------------------:|:-------------------------:|
 | <img width="600" alt="Church" src="churchfit.jpg">  Church, R: (-4, 58), G: (4, 25) | <img width="600" alt="Harvesters" src="harvestersfit.jpg"> Harvesters, R: (13, 124), G: (16, 59) |

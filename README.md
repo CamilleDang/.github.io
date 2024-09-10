@@ -50,20 +50,17 @@ Additionally, I aligned all images with the **blue** channel, as I had done prev
 
 ### Bells and Whistles: Better Features - Gradients
 
-For bells and whistles, I tried minimizing a different loss function. Instead of mapping by RGB similarity, which can sometimes be faulty (shown above by Emir)
+For bells and whistles, I tried minimizing a different loss function. Instead of mapping by RGB similarity, which can sometimes be faulty (shown above by Emir), I wrote a function that finds the Euclidean distance between the gradients of image 1 and image 2.
 
-This method worked for all images but was slower (~3 minutes); however, specifically for Emir's image, the gradient was a better feature to compare similarity 
+This method effectively worked for all images in finding the best offsets, albeit being slightly slower than the RGB similarity method (taking around 2 minutes per image). However, typically, comparing pixel gradients tend to be more robust than simply comparing RGB similarities. This is because direct comparison of RGB values are purely based on color values and can be affected by specific lighting or color representation. On the other hand, comparing pixels gradients can capture the differences in direction and intensity across the image, which are better for comparing more structural qualities of an image as opposed to purely comparing based on color. A direct example of this is in the Emir image -- comparing by gradient finds the best structural similarity as opposed to comparing by color, which is skewed by Emir's very blue clothing.
 
 | RBG Similarity (Blue Base) | RBG Similarity (Green Base) | Gradient Similarity (Blue Base) |
 |:-------------------------:|:-------------------------:|:-------------------------:|
 | <img width="500" alt="Emir Reg Alignment" src="emirfit.jpg"> R: (-630, 153), G: (24, 49) | <img width="500" alt="Emir Green" src="emirswitch.jpg"> R: (17, 57), B: (-24, -49) | <img width="500" alt="Emir Gradient Align" src="emirgradient.jpg"> R: (41, 105), G: (24, 49) |
 
+### Reflection
 
-emir gradient offsets: 
-red: 41, 105
-green: 24, 49
-
-### Bells and Whistles: Automatic Cropping
+This was actually so much fun!!! 🤩
 
 
 

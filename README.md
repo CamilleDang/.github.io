@@ -98,10 +98,16 @@ three generations:
 |<img width="600" alt="Sculpture fit" src="sculpturefit.jpg"> Sculpture, R: (-27, 140), G: (-11, 33) |  <img width="600" alt="Lady" src="ladyfit.jpg"> Lady, R: (11, 112), G: (9, 49) |
 |<img width="600" alt="Icon fit" src="iconfit.jpg"> Icon, R: (23, 89), G: (17, 40) |  <img width="600" alt="Melons" src="melons.jpg"> Melons, R: (13, 179), G: (10, 82) |
 |<img width="600" alt="Train fit" src="trainnfit.jpg"> Train, R: (32, 87), G: (5, 42) |  <img width="600" alt="Onion Church fit" src="onionchurch.jpg"> Onion Church, R: (36, 108), G: (26, 51) |
-|<img width="600" alt="Self Portrait Fit" src="selfportraitfit.jpg"> Train, R: (32, 87), G: (5, 42) |  <img width="600" alt="Three Generations fit" src="threegenerationsfit.jpg"> Onion Church, R: (36, 108), G: (26, 51) |
+|<img width="600" alt="Self Portrait Fit" src="selfportraitfit.jpg"> Self Portrait, R: (32, 87), G: (5, 42) |  <img width="600" alt="Three Generations fit" src="threegenerationsfit.jpg"> Three Generations, R: (36, 108), G: (26, 51) |
+|<img width="600" alt="Self Portrait Fit" src="selfportraitfit.jpg"> Emir (*aligned on blue channel*), R: (-630, 153), G: (24, 49) |  <img width="600" alt="Three Generations fit" src="threegenerationsfit.jpg"> Emir (*aligned on green channel*), R: (24, 49), G: (26, 51) |
 
 ### Bells and Whistles: Better Features - Gradients
 I tried another 
+
+
+emir gradient offsets: 
+red: 41, 105
+green: 24, 49
 
 ### Bells and Whistles: Automatic Cropping
 

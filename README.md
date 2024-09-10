@@ -47,6 +47,9 @@ My code was running at about 1.5 minutes, and thus to optimize, I triedrecursing
 
 ### Bells and Whistles: Better Features - Gradients
 I tried another 
+|  |  |
+|:-------------------------:|:-------------------------:|
+| <img width="600" alt="Church" src="churchfit.jpg">  Church, R: (-4, 58), G: (4, 25) | <img width="600" alt="Harvesters" src="harvestersfit.jpg"> Harvesters, R: (13, 124), G: (16, 59) |
 
 
 emir gradient offsets: 

@@ -56,7 +56,7 @@ Three more extra examples (tif files: Lugano Grass, Lugano Ocean, and Zakat na m
 
 | | |  |
 |:-------------------------:|:-------------------------:|:-------------------------:|
-| <img width="500" alt="image 1 Alignment" src="eximage2.jpg"> Lugano Grass R: (38, 86), G: (13, 36) | <img width="500" alt="Emir Green" src="eximageah.jpg"> Lugano Ocean R: (-29, 92), B: (-16, 41) | <img width="500" alt="Emir Gradient Align" src="emirgradient.jpg"> Zakat na mori︠e︡ R: (-54, 17), G: (-41, 0) |
+| <img width="500" alt="image 1 Alignment" src="eximage1fit.jpg"> Lugano Grass R: (38, 86), G: (13, 36) | <img width="500" alt="Emir Green" src="eximageah.jpg"> Lugano Ocean R: (-29, 92), B: (-16, 41) | <img width="500" alt="Emir Gradient Align" src="try.jpg"> Lastochkino gni︠e︡zdo R: (-8, 75), G: (-2, -2) |
 
 ### Bells and Whistles: Better Features - Gradients
 
